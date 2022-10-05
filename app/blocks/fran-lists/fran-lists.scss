@@ -1,0 +1,47 @@
+.fran-lists__accordion {
+
+  .fran-lists__item {
+    margin-bottom: 20px;
+  }
+
+  .fran-lists__title {
+    @extend %flex-center;
+    cursor: pointer;
+
+    span {
+      @extend %regular-text;
+      font-weight: 700;
+    }
+
+    svg {
+      transition: 0.35s;
+      margin-left: 6px;
+    }
+
+    &.active svg {
+      transform: rotate(180deg);
+      transition: 0.35s;
+    }
+  }
+
+  .fran-lists__content {
+    height: 0;
+    overflow: hidden;
+    transition: 0.35s;
+
+    &.active {
+      margin-top: 8px;
+      transition: 0.35s;
+    }
+
+    .fran-lists__content-link {
+      @extend %regular-text;
+      color: $gray;
+      padding: 2px 0;
+    }
+  }
+
+  .franAll-list__link svg {
+    transform: rotate(-90deg);
+  }
+}

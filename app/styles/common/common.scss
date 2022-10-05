@@ -1,8 +1,8 @@
 :root {
-  --container: 1360px;
-  --header-height: 328px;
-  --header-bottom-height: 68px;
-  --tape-height: 76px;
+  --container: 1200px;
+  //--header-height: 328px;
+  //--header-bottom-height: 68px;
+  //--tape-height: 76px;
 }
 
 html {
@@ -70,8 +70,23 @@ a {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: var(--container);
   margin: 0 auto;
+}
+
+.fran-main {
+  display: flex;
+
+  .fran-left {
+    width: 100%;
+    max-width: 230px;
+  }
+
+  .fran-right {
+    width: 100%;
+    max-width: 925px;
+    margin-left: auto;
+  }
 }
 
 

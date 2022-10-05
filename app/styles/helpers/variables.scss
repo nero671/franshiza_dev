@@ -3,3 +3,21 @@ $sm: 576px;
 $md: 768px;
 $lg: 992px;
 $xl: 1200px;
+$dark: #090d1b;
+$gray: #575757;
+$darkblue: #007aa9;
+$blue: #01a0e1;
+$lightgray: #e9eff2;
+
+%flex-center {
+  display: flex;
+  align-items: center;
+}
+
+%regular-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.01em;
+  color: $dark;
+}
