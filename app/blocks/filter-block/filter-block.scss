@@ -1,0 +1,134 @@
+#filter-block {
+  background: $lightgray;
+  border-radius: 12px;
+  padding: 30px;
+  margin-top: 30px;
+}
+
+.filter-block__title-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  .filter-block__title {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+    color: $dark;
+    letter-spacing: 0.01em;
+  }
+
+  .filter-block__search-result_wrapper {
+    @extend %regular-text;
+
+    span {
+      font-weight: 700;
+      margin-left: 2px;
+    }
+  }
+}
+
+.filter-block__wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.filter-block__sortlist {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  cursor: pointer;
+  transition: 0.35s;
+
+  svg {
+    transition: 0.35s;
+  }
+
+  &.active {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    transition: 0.35s;
+
+    svg {
+      transform: rotate(180deg);
+      transition: 0.35s;
+    }
+  }
+
+  span {
+    @extend %regular-text;
+  }
+}
+
+.filter-block__item {
+  width: 270px;
+  margin-bottom: 16px;
+
+  &:last-child {
+    width: 570px;
+    margin-bottom: 0 !important;
+  }
+}
+
+.filter-block__sort-wrapper {
+  border: none;
+  border-radius: 6px;
+  background: #fff;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  display: flex;
+  flex-direction: column;
+  height: 0;
+  overflow: hidden;
+  transition: 0.35s;
+
+  &.active {
+    padding: 12px;
+    transition: 0.35s;
+  }
+
+  label {
+    padding: 4px 0;
+    cursor: pointer;
+    @extend %flex-center;
+
+    input {
+      margin-right: 4px;
+    }
+  }
+}
+
+.filter-tags {
+  @extend %flex-center;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.filter-tag {
+  @extend %regular-text;
+  @extend %flex-center;
+  padding: 3px 12px;
+  color: $darkblue;
+  border: 1px solid $darkblue;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 8px;
+  margin-bottom: 8px;
+
+  &::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: url('../images/cross-blue.svg') no-repeat center center;
+    display: flex;
+    margin-left: 6px;
+  }
+}
+
