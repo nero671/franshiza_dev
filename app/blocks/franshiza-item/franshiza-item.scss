@@ -1,0 +1,30 @@
+.franshiza-item {
+  background: rgba(1, 160, 225, 0.1);
+  border-radius: 6px;
+
+  .franshiza-item__wrapper img {
+    width: 100%;
+  }
+
+
+  .franshiza-content {
+    padding: 0 12px;
+  }
+
+  .franshiza-title,
+  .franshiza-subtitle__price {
+    @extend %regular-text;
+    font-weight: 700;
+    margin-top: 10px;
+  }
+
+  .franshiza-subtitle {
+    @extend %regular-text;
+    color: $gray;
+    margin-top: 6px;
+  }
+
+  .franshiza-subtitle__price {
+    margin-top: 24px;
+  }
+}

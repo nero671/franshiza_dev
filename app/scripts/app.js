@@ -127,14 +127,43 @@ const filterTags = () => {
   filterTag.classList.add('filter-tag');
 
   filterBlockWrapper.addEventListener('click', (e) => {
-    if (e.target.closest('input[type="radio"]:checked')) {
+    if (e.target.closest('input[type="radio"]')) {
       filterTag.textContent = e.target.dataset.orig;
       filterTags.append(filterTag);
+
+      const filterTagItem = document.querySelector('.filter-tag');
+
+      filterTagItem.addEventListener('click', () => {
+        filterTag.remove();
+
+        const radioInput = document.querySelectorAll('.filter-block__wrapper input[type="radio"]');
+
+        radioInput.forEach((item) => {
+          // eslint-disable-next-line no-param-reassign
+          item.checked = 'false';
+        });
+      });
     } else if (e.target.closest('input[type="checkbox"]')) {
       const filterTagCheck = document.createElement('div');
       filterTagCheck.classList.add('filter-tag');
       filterTagCheck.textContent = e.target.dataset.orig;
       filterTags.append(filterTagCheck);
+
+      const filterTagItem = document.querySelectorAll('.filter-tag');
+      const checketInput = document.querySelectorAll('.filter-block__wrapper input[type="checkbox"]');
+      filterTagItem.forEach((item) => {
+        item.addEventListener('click', () => {
+          item.remove();
+          checketInput.forEach((check) => {
+            if (item.textContent === check.dataset.orig) {
+              // eslint-disable-next-line no-param-reassign
+              check.checked = false;
+            }
+          });
+        });
+      });
+    } else if (e.target.closest('input[type="checkbox"]')) {
+      console.log('hi');
     }
   });
 };

@@ -130,5 +130,23 @@
     display: flex;
     margin-left: 6px;
   }
+
+  &__clear {
+    @extend %regular-text;
+    display: flex;
+    border: 1px solid #b4b4b4;
+    border-radius: 6px;
+    padding: 3px 12px;
+
+    &::after {
+      content: '';
+      width: 20px;
+      height: 20px;
+      background: url('../images/cross-gray.svg') no-repeat center center;
+      display: flex;
+      margin-left: 6px;
+      cursor: pointer;
+    }
+  }
 }
 
