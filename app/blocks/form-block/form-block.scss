@@ -1,0 +1,93 @@
+#form-block {
+  margin-top: 56px;
+  background: $lightgray;
+  border-radius: 12px;
+  @extend %flex-center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.form-block__fran {
+  margin-top: 24px;
+  @extend %flex-center;
+  flex-direction: column;
+
+
+  .form-block__fran-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    color: $blue;
+    @extend %flex-center;
+    cursor: pointer;
+
+    svg {
+      margin-left: 6px;
+    }
+  }
+}
+
+.form-block__fran_wrapper {
+  //margin-top: 20px;
+  height: 0;
+  overflow: hidden;
+
+  .form-block__fran-item {
+    display: flex;
+  }
+
+  .form-block__fran-content {
+    margin-left: 12px;
+
+    .form-block__fran-content_title {
+      @extend %regular-text;
+    }
+  }
+
+  .form-block__fran-content_remove {
+    @extend %regular-text;
+    @extend %flex-center;
+    color: $gray;
+    cursor: pointer;
+
+    svg {
+      margin-left: 2px;
+    }
+  }
+}
+
+.fran-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+
+  .fran-input {
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    margin-bottom: 8px;
+    color: #b4b4b4;
+
+    &::placeholder {
+      @extend %regular-text;
+      color: #b4b4b4;
+    }
+  }
+}
+
+.after-form__note {
+  @extend %regular-text;
+  color: #b4a8bd;
+  font-size: 12px;
+  line-height: 130%;
+  margin-top: 10px;
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+

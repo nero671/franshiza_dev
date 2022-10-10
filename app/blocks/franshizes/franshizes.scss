@@ -5,3 +5,28 @@
 .franshizes {
   padding-top: 20px;
 }
+
+.show-more__wrapper {
+  @extend %flex-center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.show-more {
+  @extend %flex-center;
+  justify-content: center;
+  padding: 10px;
+  width: 185px;
+  background: $blue;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  color: #fff;
+
+  svg {
+    margin-left: 6px;
+  }
+}

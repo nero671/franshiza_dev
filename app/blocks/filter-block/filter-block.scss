@@ -70,6 +70,7 @@
 .filter-block__item {
   width: 270px;
   margin-bottom: 16px;
+  position: relative;
 
   &:last-child {
     width: 570px;
@@ -88,6 +89,11 @@
   height: 0;
   overflow: hidden;
   transition: 0.35s;
+  padding-left: 12px;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  box-shadow: 0px -5px 5px -8px rgba(34, 60, 80, 0.6) inset;
 
   &.active {
     padding: 12px;
@@ -137,6 +143,9 @@
     border: 1px solid #b4b4b4;
     border-radius: 6px;
     padding: 3px 12px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
 
     &::after {
       content: '';

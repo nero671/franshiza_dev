@@ -1,0 +1,23 @@
+#news {
+  margin-top: 56px;
+}
+
+.news-title__wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.news-title__link {
+  @extend %flex-center;
+  @extend %regular-text;
+  color: $darkblue;
+
+  svg {
+    margin-left: 6px;
+  }
+}
+
+.text-cart__wrapper {
+  margin-top: 30px;
+}

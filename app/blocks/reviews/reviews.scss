@@ -1,0 +1,23 @@
+#reviews {
+  margin-top: 56px;
+}
+
+.reviews-title__wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.reviews-title__link {
+  @extend %flex-center;
+  @extend %regular-text;
+  color: $darkblue;
+
+  svg {
+    margin-left: 6px;
+  }
+}
+
+.text-cart__wrapper {
+  margin-top: 30px;
+}

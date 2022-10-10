@@ -81,7 +81,10 @@
 
   .header-phone {
     @extend %flex-center;
-    @extend %regular-text;
+
+    a {
+      @extend %regular-text;
+    }
 
     svg {
       margin-right: 6px;

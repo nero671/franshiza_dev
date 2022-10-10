@@ -90,6 +90,8 @@ const filterBlockOpen = () => {
   const filterBlockItem = document.querySelectorAll('.filter-block__item');
 
   const open = (button, dropdown) => {
+    // eslint-disable-next-line no-use-before-define
+    closeDrops();
     /* eslint-disable-next-line */
     dropdown.style.height = "".concat(dropdown.scrollHeight + 20, "px");
     button.classList.add('active');
@@ -102,6 +104,15 @@ const filterBlockOpen = () => {
     dropdown.classList.remove('active');
     // eslint-disable-next-line no-param-reassign
     dropdown.style.height = '';
+  };
+
+  const closeDrops = (button, dropdown) => {
+    /* eslint-disable-next-line */
+    filterBlockItem.forEach(item => {
+      if (item.children[0] !== button && item.children[1] !== dropdown) {
+        close(item.children[0], item.children[1]);
+      }
+    });
   };
 
   if (filterBlockWrapper) {
@@ -121,16 +132,30 @@ const filterBlockOpen = () => {
 
 const filterTags = () => {
   const filterBlockWrapper = document.querySelector('.filter-block__wrapper');
+  const filterBlockSortlist = document.querySelectorAll('.filter-block__sortlist');
+  const filterBlockSortWrapper = document.querySelectorAll('.filter-block__sort-wrapper');
+  const filterTagClear = document.querySelector('.filter-tag__clear');
   // eslint-disable-next-line no-shadow
   const filterTags = document.querySelector('.filter-tags');
   const filterTag = document.createElement('div');
   filterTag.classList.add('filter-tag');
 
-  filterBlockWrapper.addEventListener('click', (e) => {
-    if (e.target.closest('input[type="radio"]')) {
-      filterTag.textContent = e.target.dataset.orig;
-      filterTags.append(filterTag);
+  const closeDropdowns = () => {
+    filterBlockSortlist.forEach((item) => {
+      filterBlockSortWrapper.forEach((option) => {
+        item.classList.remove('active');
+        option.classList.remove('active');
+        // eslint-disable-next-line no-param-reassign
+        option.style.height = '';
+      });
+    });
+  };
 
+  filterBlockWrapper.addEventListener('click', (e) => {
+    if (e.target.closest('.input-radio')) {
+      filterTag.textContent = e.target.dataset.orig;
+      filterTags.insertAdjacentElement('afterbegin', filterTag);
+      closeDropdowns();
       const filterTagItem = document.querySelector('.filter-tag');
 
       filterTagItem.addEventListener('click', () => {
@@ -145,9 +170,21 @@ const filterTags = () => {
       });
     } else if (e.target.closest('input[type="checkbox"]')) {
       const filterTagCheck = document.createElement('div');
+
       filterTagCheck.classList.add('filter-tag');
       filterTagCheck.textContent = e.target.dataset.orig;
-      filterTags.append(filterTagCheck);
+      closeDropdowns();
+
+      if (e.target.closest('input[type="checkbox"]').checked === true) {
+        filterTagClear.insertAdjacentElement('beforebegin', filterTagCheck);
+      } else {
+        const filterTagItem = document.querySelectorAll('.filter-tag');
+        filterTagItem.forEach((item) => {
+          if (item.textContent === e.target.dataset.orig) {
+            item.remove();
+          }
+        });
+      }
 
       const filterTagItem = document.querySelectorAll('.filter-tag');
       const checketInput = document.querySelectorAll('.filter-block__wrapper input[type="checkbox"]');
@@ -162,9 +199,30 @@ const filterTags = () => {
           });
         });
       });
-    } else if (e.target.closest('input[type="checkbox"]')) {
-      console.log('hi');
+    } else if (e.target.closest('.sort-radio')) {
+      const filterBlockSortlistTitle = document.querySelector('.filter-block__sortlist-title');
+      const sortRadio = document.querySelectorAll('.sort-radio');
+      closeDropdowns();
+
+      sortRadio.forEach((item) => {
+        item.addEventListener('click', () => {
+          filterBlockSortlistTitle.textContent = item.dataset.orig;
+        });
+      });
     }
+  });
+
+  filterTagClear.addEventListener('click', (e) => {
+    // eslint-disable-next-line no-shadow
+    const filterTag = document.querySelectorAll('.filter-tag');
+    const inputFilter = document.querySelectorAll('.filter-block__wrapper input');
+    filterTag.forEach((item) => {
+      inputFilter.forEach((input) => {
+        item.remove();
+        // eslint-disable-next-line no-param-reassign
+        input.checked = false;
+      });
+    });
   });
 };
 

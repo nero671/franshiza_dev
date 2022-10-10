@@ -27,4 +27,22 @@
   .franshiza-subtitle__price {
     margin-top: 24px;
   }
+
+  .franshiza-btn {
+    @extend %flex-center;
+    @extend %regular-text;
+    justify-content: center;
+    background: #fff;
+    margin-top: 10px;
+    margin-bottom: 14px;
+
+    .fran-check {
+      @extend %flex-center;
+      cursor: pointer;
+      color: $darkblue;
+    }
+  }
 }
+
+
+
