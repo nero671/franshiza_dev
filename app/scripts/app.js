@@ -226,7 +226,35 @@ const filterTags = () => {
   });
 };
 
+const mobileSearchOpen = () => {
+  const headerBottomSearch = document.querySelector('.header-bottom__search');
+  const headerSearch = document.querySelector('.header-bottom .header-search');
+
+  headerBottomSearch.addEventListener('click', (e) => {
+    headerSearch.classList.add('active');
+  });
+
+  headerSearch.addEventListener('click', (e) => {
+    if (e.target.closest('.input-btn')) {
+      headerSearch.classList.remove('active');
+    }
+  });
+};
+
+const openMobileMenu = () => {
+  const burger = document.querySelector('.burger');
+  const menuPopup = document.querySelector('.menu-popup');
+  const menuPopupWrapper = document.querySelector('.menu-popup__wrapper');
+
+  burger.addEventListener('click', (e) => {
+    menuPopup.classList.add('active');
+    menuPopupWrapper.classList.add('active');
+  });
+}
+
 franAccordion();
 initSliders();
 filterBlockOpen();
 filterTags();
+mobileSearchOpen();
+openMobileMenu();

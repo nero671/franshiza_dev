@@ -104,4 +104,72 @@
       display: none;
     }
   }
+
+  .burger {
+    display: none;
+  }
+
+  .header-search,
+  .header-bottom__search {
+    display: none;
+  }
+}
+
+@media (max-width: 1250px) {
+  .burger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
+
+    span {
+      width: 32px;
+      height: 2px;
+      background: $blue;
+      margin-bottom: 4px;
+    }
+  }
+
+
+  .header-top {
+    padding-bottom: 16px;
+
+    .header-catalog,
+    .navbar,
+    .header-search {
+      display: none;
+    }
+  }
+
+  .header-bottom {
+    position: relative;
+    padding-top: 16px;
+
+    .navbar,
+    .button-wrapper {
+      display: none;
+    }
+
+    .header-bottom__search {
+      margin-left: auto;
+      display: block;
+    }
+
+    .header-search {
+      display: flex;
+      position: absolute;
+      width: 100%;
+      right: -120%;
+      transition: 0.5s;
+
+      &.active {
+        right: 0;
+        transition: 0.5s;
+      }
+
+      input {
+        width: 100%;
+      }
+    }
+  }
 }

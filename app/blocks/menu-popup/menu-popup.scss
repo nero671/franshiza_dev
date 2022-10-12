@@ -1,0 +1,29 @@
+.popup {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background: rgba(43, 44, 46, 0.5);
+  visibility: hidden;
+
+  &.active {
+    visibility: visible;
+    transition: 0.8s;
+  }
+}
+
+.menu-popup__wrapper {
+  padding: 16px;
+  width: 70%;
+  background: #fff;
+  height: 100vh;
+  transform: translate(-100%);
+  transition: 0.8s;
+  overflow-y: scroll;
+
+  &.active {
+    transform: translate(0);
+    transition: 0.8s;
+  }
+}
