@@ -250,7 +250,25 @@ const openMobileMenu = () => {
     menuPopup.classList.add('active');
     menuPopupWrapper.classList.add('active');
   });
-}
+
+  menuPopup.addEventListener('click', (e) => {
+    if (e.target.closest('.cross') || e.target.matches('.popup')) {
+      menuPopup.classList.remove('active');
+      menuPopupWrapper.classList.remove('active');
+    }
+  });
+};
+
+const toggleBtnCheckActive = () => {
+  const franCheck = document.querySelectorAll('.fran-check');
+  const franchizes = document.querySelector('.franshizes');
+
+  franchizes.addEventListener('click', (e) => {
+    if (e.target.closest('.fran-check')) {
+      e.target.parentNode.classList.toggle('active');
+    }
+  });
+};
 
 franAccordion();
 initSliders();
@@ -258,3 +276,4 @@ filterBlockOpen();
 filterTags();
 mobileSearchOpen();
 openMobileMenu();
+toggleBtnCheckActive();

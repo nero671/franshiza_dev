@@ -20,4 +20,24 @@
 
 .text-cart__wrapper {
   margin-top: 30px;
+
+  @media (max-width: $sm) {
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: $sm) {
+  #news {
+    margin-top: 40px;
+    position: relative;
+    padding-bottom: 60px;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .news-title__link {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+  }
 }

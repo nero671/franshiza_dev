@@ -144,6 +144,7 @@
   .header-bottom {
     position: relative;
     padding-top: 16px;
+    margin-bottom: 30px;
 
     .navbar,
     .button-wrapper {
@@ -156,7 +157,6 @@
     }
 
     .header-search {
-      display: flex;
       position: absolute;
       width: 100%;
       right: -120%;
@@ -165,6 +165,7 @@
       &.active {
         right: 0;
         transition: 0.5s;
+        display: flex;
       }
 
       input {
@@ -172,4 +173,10 @@
       }
     }
   }
+}
+
+.header-logo__text {
+  margin-top: 10px;
+  @extend %regular-text;
+  font-weight: 700;
 }

@@ -27,4 +27,12 @@
   color: $gray;
 }
 
+@media (max-width: $sm) {
+  .text-cart__item {
+    padding: 12px;
+  }
 
+  .text-cart__text {
+    font-size: 12px;
+  }
+}

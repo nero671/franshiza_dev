@@ -1,9 +1,13 @@
 .franshiza-item {
-  background: rgba(1, 160, 225, 0.1);
   border-radius: 6px;
 
   .franshiza-item__wrapper img {
     width: 100%;
+    border-radius: 6px;
+
+    @media (max-width: $sm) {
+      border-radius: 0;
+    }
   }
 
 
@@ -32,9 +36,18 @@
     @extend %flex-center;
     @extend %regular-text;
     justify-content: center;
-    background: #fff;
+    background: #e9eff2;
     margin-top: 10px;
     margin-bottom: 14px;
+
+    &.active {
+      color: #fff;
+      background: $blue;
+
+      .fran-check {
+        color: #fff;
+      }
+    }
 
     .fran-check {
       @extend %flex-center;
@@ -42,6 +55,37 @@
       color: $darkblue;
     }
   }
+
+}
+
+.fran-blue {
+  background: rgba(1, 160, 225, 0.1);
+
+  .franshiza-btn {
+    @extend %flex-center;
+    @extend %regular-text;
+    justify-content: center;
+    background: #fff;
+    margin-top: 10px;
+    margin-bottom: 14px;
+
+    &.active {
+      color: #fff;
+      background: $blue;
+
+      .fran-check {
+        color: #fff;
+      }
+    }
+
+    .fran-check {
+      @extend %flex-center;
+      cursor: pointer;
+      color: $darkblue;
+    }
+  }
+
+
 }
 
 

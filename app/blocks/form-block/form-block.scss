@@ -90,4 +90,20 @@
   }
 }
 
+@media (max-width: 576px) {
+  #form-block {
+    margin-top: 40px;
+    padding: 30px 16px;
+    align-items: flex-start;
+    border-radius: 0;
+
+    .fran-form {
+      margin-top: 32px;
+    }
+  }
+
+  .form-block__fran {
+    margin-top: 8px;
+  }
+}
 

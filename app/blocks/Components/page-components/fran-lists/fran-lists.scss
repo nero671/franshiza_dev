@@ -28,6 +28,8 @@
     height: 0;
     overflow: hidden;
     transition: 0.35s;
+    display: flex;
+    flex-direction: column;
 
     &.active {
       margin-top: 8px;
@@ -43,5 +45,11 @@
 
   .franAll-list__link svg {
     transform: rotate(-90deg);
+  }
+}
+
+@media (max-width: 1250px) {
+  .fran-lists__accordion .fran-lists__item {
+    margin-bottom: 8px;
   }
 }

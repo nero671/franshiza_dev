@@ -5,4 +5,17 @@
   img {
     width: 100%;
   }
+
+  .banner-mob {
+    display: none;
+  }
+}
+
+@media (max-width: $sm) {
+  .banner-mob {
+    display: block !important;
+  }
+  .banner-desk {
+    display: none;
+  }
 }

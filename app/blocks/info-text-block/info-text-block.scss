@@ -1,0 +1,26 @@
+.info-text-block {
+  margin-top: 56px;
+
+  iframe {
+    margin-bottom: 24px;
+
+    @media (max-width: $sm) {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: $sm) {
+    margin-top: 40px;
+    padding: 0 16px;
+  }
+}
+
+.regular-text {
+  @extend %regular-text;
+  margin: 24px 0;
+
+  ul {
+    list-style: inside;
+    margin-left: 5px;
+  }
+}

@@ -16,3 +16,9 @@
   color: $dark;
   margin-top: 10px;
 }
+
+@media (max-width: 576px) {
+  .slider-left {
+    padding: 0 16px;
+  }
+}

@@ -30,3 +30,21 @@
     margin-left: 6px;
   }
 }
+
+@media (max-width: 576px) {
+  #franshizes {
+    padding-top: 30px;
+
+    .subtitle {
+      padding: 0 16px;
+    }
+  }
+
+  .show-more__wrapper {
+    padding: 0 16px;
+  }
+
+  .show-more {
+    width: 100%;
+  }
+}

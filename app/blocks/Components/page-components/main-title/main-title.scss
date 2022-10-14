@@ -9,5 +9,20 @@
   @extend %regular-text;
   color: $gray;
   margin-top: 10px;
-  width: 814px;
+  max-width: 814px;
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  #main-title {
+    padding: 0 16px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .subtitle__text {
+    margin-top: 16px;
+  }
 }
