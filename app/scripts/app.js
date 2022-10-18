@@ -142,7 +142,7 @@ const filterBlockOpen = () => {
         /* eslint-disable-next-line */
         dropdown.classList.contains('active') ? close(button, dropdown) : open(button, dropdown);
       }
-    })
+    });
   }
 };
 
@@ -243,7 +243,6 @@ const filterTags = () => {
       });
     });
   }
-
 };
 
 const mobileSearchOpen = () => {

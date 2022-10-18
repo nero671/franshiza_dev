@@ -35,6 +35,10 @@
   @extend %flex-center;
   position: relative;
 
+  @media (max-width: $sm) {
+    padding: 0 16px;
+  }
+
   &::before {
     background-image: url('../images/sort.png');
     background-position: 0px -32px;
@@ -60,6 +64,10 @@
   .filter-block__sort-wrapper {
     width: fit-content;
     top: 37px;
+
+    @media (max-width: $sm) {
+      top: 58px;
+    }
   }
 }
 
