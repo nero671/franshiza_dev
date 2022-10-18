@@ -2,6 +2,39 @@
   @@include("blocks/Components/item-components/subtitle.html", {
   "title-text": "Список франшиз",
   })
+  <div class="filter-block__item-sort">
+    <div class="filter-block__sortlist">
+      <span class="filter-block__sortlist-title">Сортировка франшиз по популярности</span>
+    </div>
+    <div class="filter-block__sort-wrapper">
+      <label class="radio-sort">
+        <input type="radio" name="stockFilter1[<PROPERTY_MIN_INVEST]" value="" data-orig="Сортировка франшиз по популярности" data-id="" class="sort-radio">
+        <span class="radio__inner">
+                <span class="radio__style"></span>
+                <span class="radio__title filter-value">
+                  Сортировка франшиз по популярности
+                </span>
+              </span>
+      </label>
+      <label class="radio-sort">
+        <input type="radio" name="stockFilter1[<PROPERTY_MIN_INVEST]" value="" data-orig="Сортировка от низких объëмов инвестиций к высоким" data-id="" class="sort-radio">
+        <span class="radio__inner">
+                <span class="radio__style"></span>
+                <span class="radio__title filter-value">Сортировка от низких объëмов инвестиций к высоким</span>
+              </span>
+      </label>
+      <label class="radio-sort">
+        <input type="radio" name="stockFilter1[<PROPERTY_MIN_INVEST]" value="" data-orig="От высоких объëмов инвестиций к низким" data-id="" class="sort-radio">
+        <span class="radio__inner">
+                <span class="radio__style"></span>
+                <span class="radio__title filter-value">
+                  От высоких объëмов инвестиций к низким
+                </span>
+              </span>
+      </label>
+
+    </div>
+  </div>
   <div class="franshizes row-3">
     @@include('blocks/franshiza-item/franshiza-item.html', {
       "src": "assets/images/fran1.png",

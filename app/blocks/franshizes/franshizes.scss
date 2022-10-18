@@ -31,6 +31,38 @@
   }
 }
 
+.filter-block__item-sort {
+  @extend %flex-center;
+  position: relative;
+
+  &::before {
+    background-image: url('../images/sort.png');
+    background-position: 0px -32px;
+    background-repeat: no-repeat;
+    width: 19px;
+    height: 16px;
+    display: flex;
+    top: 2px;
+    left: 0;
+    margin: 0 5px 0 0;
+    content: '';
+  }
+
+  .filter-block__sortlist {
+    padding: 12px 0;
+
+    span {
+      color: $darkblue;
+      font-size: 16px;
+    }
+  }
+
+  .filter-block__sort-wrapper {
+    width: fit-content;
+    top: 37px;
+  }
+}
+
 @media (max-width: 576px) {
   #franshizes {
     padding-top: 30px;

@@ -53,9 +53,13 @@
       @extend %flex-center;
       cursor: pointer;
       color: $darkblue;
+
+      label:not(.error)::before {
+        border-color: #fff;
+        background-color: #fff;
+      }
     }
   }
-
 }
 
 .fran-blue {
@@ -82,11 +86,11 @@
       @extend %flex-center;
       cursor: pointer;
       color: $darkblue;
+
+      label:not(.error)::before {
+        border-color: $darkblue;
+        background-color: transparent;
+      }
     }
   }
-
-
 }
-
-
-

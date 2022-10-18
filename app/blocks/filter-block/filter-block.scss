@@ -1,7 +1,7 @@
 #filter-block {
   background: $lightgray;
   border-radius: 12px;
-  padding: 30px;
+  padding: 10px 20px;
   margin-top: 30px;
 }
 
@@ -72,10 +72,10 @@
   margin-bottom: 16px;
   position: relative;
 
-  &:last-child {
-    width: 570px;
-    margin-bottom: 0 !important;
-  }
+  //&:last-child {
+  //  width: 570px;
+  //  margin-bottom: 0 !important;
+  //}
 }
 
 .filter-block__sort-wrapper {

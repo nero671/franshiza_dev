@@ -8,7 +8,7 @@
 .subtitle__text {
   @extend %regular-text;
   color: $gray;
-  margin-top: 10px;
+  margin-top: 16px;
   max-width: 814px;
   width: 100%;
 }
@@ -20,9 +20,5 @@
 
   .title {
     font-size: 22px;
-  }
-
-  .subtitle__text {
-    margin-top: 16px;
   }
 }

@@ -1,6 +1,6 @@
 .header-top {
   padding-top: 23px;
-  padding-bottom: 26px;
+  padding-bottom: 14px;
   @extend %flex-center;
 }
 
@@ -76,8 +76,9 @@
 .header-bottom {
   @extend %flex-center;
   border-top: 1px solid $lightgray;
-  padding-top: 24px;
-  margin-bottom: 36px;
+  padding-top: 20px;
+  margin-bottom: 5px;
+  position: relative;
 
   .header-phone {
     @extend %flex-center;
@@ -179,4 +180,6 @@
   margin-top: 10px;
   @extend %regular-text;
   font-weight: 700;
+  position: absolute;
+  top: 0;
 }

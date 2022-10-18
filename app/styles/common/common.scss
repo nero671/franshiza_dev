@@ -86,6 +86,7 @@ a {
   .fran-left {
     width: 100%;
     max-width: 230px;
+    margin-top: 45px;
   }
 
   .fran-right {
@@ -125,8 +126,12 @@ a {
   .fran-main {
     flex-direction: column;
 
-    .fran-left .slider-left {
-      display: none;
+    .fran-left {
+      margin-top: 0;
+
+      .slider-left {
+        display: none;
+      }
     }
 
     .fran-right {
