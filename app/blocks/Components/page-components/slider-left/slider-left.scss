@@ -21,4 +21,12 @@
   .slider-left {
     padding: 0 16px;
   }
+
+  .vertical-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 }

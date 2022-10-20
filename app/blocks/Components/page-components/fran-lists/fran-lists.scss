@@ -53,3 +53,35 @@
     margin-bottom: 8px;
   }
 }
+
+@media (max-width: 576px) {
+  .fran-lists__accordion {
+    .fran-lists__item {
+      padding: 8px 0;
+      border-top: 1px solid $lightgray;
+      margin-bottom: 0;
+    }
+
+    .fran-lists__title {
+      justify-content: space-between;
+
+      span {
+        font-size: 15px;
+      }
+
+      svg {
+        transform: rotate(-90deg);
+      }
+
+      &.active svg {
+        transform: rotate(0deg);
+        transition: 0.35s;
+      }
+    }
+
+    .franAll-list__link {
+      display: block;
+      margin-top: 10px;
+    }
+  }
+}

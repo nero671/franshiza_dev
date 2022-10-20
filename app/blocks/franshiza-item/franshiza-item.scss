@@ -55,7 +55,6 @@
       color: $darkblue;
 
       label:not(.error)::before {
-        border-color: #fff;
         background-color: #fff;
       }
     }

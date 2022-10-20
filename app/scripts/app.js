@@ -246,10 +246,10 @@ const filterTags = () => {
 };
 
 const mobileSearchOpen = () => {
-  const headerBottomSearch = document.querySelector('.header-bottom__search');
+  const headerTopSearch = document.querySelector('.header-top__search');
   const headerSearch = document.querySelector('.header-bottom .header-search');
 
-  headerBottomSearch.addEventListener('click', (e) => {
+  headerTopSearch.addEventListener('click', (e) => {
     headerSearch.classList.add('active');
   });
 
@@ -289,6 +289,19 @@ const toggleBtnCheckActive = () => {
   });
 };
 
+const scrollTo = () => {
+  document.body.addEventListener('click', (e) => {
+    if (e.target.closest('a[href^="#"]')) {
+      e.preventDefault();
+      const target = e.target.closest('a[href^="#"]').getAttribute('href');
+      document.querySelector(target).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  });
+};
+
 franAccordion();
 initSliders();
 filterBlockOpen();
@@ -296,3 +309,4 @@ filterTags();
 mobileSearchOpen();
 openMobileMenu();
 toggleBtnCheckActive();
+scrollTo();
