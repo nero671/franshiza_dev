@@ -229,3 +229,13 @@
     order: 3;
   }
 }
+
+.input-wrap__status--error {
+  margin-bottom: 15px;
+  color: red;
+  display: none;
+}
+
+.footer-middle__form.error .input-wrap__status--error {
+    display: block;
+}

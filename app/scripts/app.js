@@ -302,6 +302,28 @@ const scrollTo = () => {
   });
 };
 
+const validateForm = () => {
+  const footerForm = document.querySelector('.footer-middle__form');
+  const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+
+  function isEmailValid(value) {
+    return EMAIL_REGEXP.test(value);
+  }
+
+  footerForm.addEventListener('input', (e) => {
+    const target = e.target.closest('.footer-middle__input');
+
+    if (isEmailValid(target.value)) {
+      footerForm.classList.remove('error');
+    } else if (target.value.length >= 1) {
+      footerForm.classList.add('error');
+      e.preventDefault();
+    } else if (target.value.length < 1) {
+      footerForm.classList.remove('error');
+    }
+  });
+};
+
 franAccordion();
 initSliders();
 filterBlockOpen();
@@ -310,3 +332,4 @@ mobileSearchOpen();
 openMobileMenu();
 toggleBtnCheckActive();
 scrollTo();
+validateForm();

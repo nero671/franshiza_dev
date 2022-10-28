@@ -92,7 +92,8 @@
     </div>
 
     <form action="#" class="footer-middle__form">
-      <input type="text" class="footer-middle__input" placeholder="Ваш E-mail">
+      <input type="text" name="email" class="footer-middle__input" placeholder="Ваш E-mail">
+      <span class="input-wrap__status input-wrap__status--error">Введите адрес электронной почты!</span>
       @@include('blocks/Components/item-components/button.html', {
         "btn-text": "Подписаться на новости"
       })
