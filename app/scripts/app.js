@@ -324,6 +324,15 @@ const validateForm = () => {
   });
 };
 
+const openFormFran = () => {
+  const formBlockFranTitle = document.querySelector('.form-block__fran-title');
+  const formBlockFranWrapper = document.querySelector('.form-block__fran_wrapper');
+
+  formBlockFranTitle.addEventListener('click', () => {
+    formBlockFranWrapper.classList.toggle('active');
+  });
+}
+
 franAccordion();
 initSliders();
 filterBlockOpen();
@@ -333,3 +342,4 @@ openMobileMenu();
 toggleBtnCheckActive();
 scrollTo();
 validateForm();
+openFormFran();
